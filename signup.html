@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Signup</title>
+<script> 
+function validate()
+{ 
+     var name = document.form.name.value;
+     var email = document.form.email.value;
+    
+     if (name==null || name=="")
+     { 
+     alert("Name can't be blank"); 
+     return false; 
+     }
+     else if (email==null || email=="")
+     { 
+     alert("Email can't be blank"); 
+     return false; 
+     }
+ } 
+</script> 
+</head>
+<style>
+body
+{
+ 
+	
+	background-image:url("https://fthmb.tqn.com/GmA33ZbRwnJYkOvtclvvMTb6pUo=/1500x1078/filters:fill(auto,1)/career-guidance-56a0f25c5f9b58eba4b572ac.jpg");
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+</style>
+<body>
+<div style="text-align: center">
+        <h1> NewUserLogin</h1>
+<form name="form" action="RegisterServlet" method="post" onsubmit="return validate()">
+        <table align="center">
+         <tr>
+         <td>Name</td>
+         <td><input type="text" name="name" /></td>
+         </tr><br>
+         <tr>
+         <td>Email</td>
+         <td><input type="text" name="email" /></td>
+         </tr>
+         <tr>
+        <td><label for="birthday">DOB</label></td>
+        <td><input type="date" id="birthday" name="birthday">
+        </td>
+        </tr>
+        <tr>
+        <td><label for="school">Maximum School</label></td>
+        <td><input type="text" name="school" /></td>
+        </tr>
+        <script> 
+            function validate()
+            { 
+                 var school = document.form.school.value;
+                if (school==null || school=="")
+                 { 
+                 alert("Fill your School Education"); 
+                 return false; 
+                 }
+                 else if (school<=10)
+                 { 
+                 alert("You have to complete SSLC it is the highest school degree"); 
+                 return false; 
+                 }
+             } 
+            </script> 
+            
+
+        </table><br>
+         <tr>
+         <td><input type="submit" value="Submit"></input><br><br>
+        <input type="reset" value="Reset"></input></td><br><br>
+         </tr>
+        
+    </form>
+    <center><a href="choose.html"><button class="navitem" >Next Page</button></a></center><br><br>
+         
+</body>
+</html>
